@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <h1>Calculator</h1>
+        <form method="POST">
+            <input type="text" name="expression" value="{{ result }}" readonly>
+            <div class="button-grid">
+
+                <button type="button" onclick="addToExpression('7')">7</button>
+                <button type="button" onclick="addToExpression('8')">8</button>
+                <button type="button" onclick="addToExpression('9')">9</button>
+                <button type="button" class="operation" onclick="addToExpression('+')">+</button>
+
+                <button type="button" onclick="addToExpression('4')">4</button>
+                <button type="button" onclick="addToExpression('5')">5</button>
+                <button type="button" onclick="addToExpression('6')">6</button>
+                <button type="button" class="operation" onclick="addToExpression('-')">−</button>
+
+                <button type="button" onclick="addToExpression('1')">1</button>
+                <button type="button" onclick="addToExpression('2')">2</button>
+                <button type="button" onclick="addToExpression('3')">3</button>
+                <button type="button" class="operation" onclick="addToExpression('*')">×</button>
+
+                <button type="button" onclick="addToExpression('0')">0</button>
+                <button type="button" class="clear-btn" onclick="clearExpression()">C</button>
+                <button type="button" class="erase-btn" onclick="eraseLast()">⌫</button>
+                <button type="button" class="operation" onclick="addToExpression('/')">÷</button>
+
+                <button type="submit" class="submit-btn">=</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
